@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog site</title>
+  <link rel="stylesheet" href="/css/jass.css">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div class="flex-column justify-space-around">
+    <header class="display-flex align-start p-2">
+
+      <nav>
+        <a class="no-button" href="/">Home</a>
+        <a class="no-button" href="/dashboard">Dashboard</a>
+
+
+
+        <!-- Conditionally render login or logout links -->
+        {{#if logged_in}}
+        <button class="no-button" id="logout">logout</button>
+        {{else}}
+        <a class="no-button" href="/login">login</a>
+        {{/if}}
+
+      </nav>
+
+
+
+
+    </header>
+
+    <main>
+
+      {{#if dashboard}}
+
+      <h1>
+        <a class="heading" href="/">YOUR DASHBOARD</a>
+      </h1>
+
+      {{else}}
+
+      <h1>
+        <a class="heading" href="/">THE TECH BLOG</a>
+      </h1>
+
+      <div class="landing">
+        <h2 class="animate__animated animate__fadeInLeft landing-title">Publish your innovation, your way</h2>
+        <p class="landing-title"><span>---</span> a unique and beautiful blog easily<span>---</span></p>
+
+      </div>
+      {{/if}}
+
+
+      <section class="container mt-5">
+        <!-- Render the sub layout -->
+        {{{ body }}}
+      </section>
+
+    </main>
+
+
+
+
+
+
+    <footer class="bg-dark text-center text-white">
+      <!-- Grid container -->
+      <div class="container p-4 pb-0">
+        <!-- Section: Social media -->
+        <section class="mb-4">
+          <!-- Facebook -->
+          {{!-- <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+              class="fab fa-facebook-f"></i></a> --}}
+
+          <!-- Twitter -->
+          {{!-- <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+              class="fab fa-twitter"></i></a> --}}
+
+          <!-- Google -->
+          {{!-- <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+              class="fab fa-google"></i></a> --}}
+
+          <!-- Instagram -->
+          {{!-- <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+              class="fab fa-instagram"></i></a> --}}
+
+          <!-- Linkedin -->
+          {{!-- <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+              class="fab fa-linkedin-in"></i></a> --}}
+
+          <!-- Github -->
+          {{!-- <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+              class="fab fa-github"></i></a> --}}
+        </section>
+        <!-- Section: Social media -->
+      </div>
+      <!-- Grid container -->
+
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2024 Copyright:
+        <a class="text-white" href="https://mdbootstrap.com/">Bootcamp</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+
+
+
+  </div>
+
+  <!-- Render script for logged in users only -->
+  {{#if logged_in}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
+</body>
+
+</html>

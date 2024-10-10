@@ -1,0 +1,173 @@
+header, .project:not(:last-child) {
+  border-bottom: 1px solid #ccc;
+}
+
+header{
+  background-color: rgb(17, 16, 16);
+  flex-direction: column;
+  gap: 30px;
+  }
+
+  nav{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 20px;
+   
+  }
+
+  nav button{
+    font-size: 20px;
+  }
+
+  .heading{
+    background-color: #ccc;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 8px 2px 0px rgb(0, 255, 255);
+    margin-left: 20px;
+    color: black;
+    
+   
+  }
+
+  .landing{
+  height: 400px;
+  background-image: url("../images/landing.jpg");
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:start; 
+}
+
+.landing-title{
+  margin-left: 10%;
+}
+
+  .post-title{
+    background-color: black;
+    padding: 10px;
+  }
+
+  .post-title a{
+color: white;
+  }
+
+  .title-date p{
+    color: white;
+    font-size: 12px;
+    font-style: italic;
+  }
+
+  .title-date{
+     background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .project{
+    border: 2px solid black;
+    
+  }
+
+
+.no-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 100%;
+}
+
+.no-button:hover {
+  color: #065b83;
+  text-decoration: underline;
+}
+
+
+.new-post{
+
+display: flex;
+
+justify-content: space-between;
+align-items: center;
+
+}
+
+
+.add-post-link{
+  background-color: black;
+  padding: 10px;
+  text-decoration: none;
+  
+  border-radius: 10px;
+  color: white;
+  font-size: 22px;
+ 
+}
+
+
+
+.added-post{
+  width: 100%;
+  background-color: black;
+  display: flex;
+  border-radius: 10px;
+  box-shadow: 8px 8px 8px rgba(3, 0, 0, 0.7);
+}
+.added-post p{
+  color: white;
+  font-size: 12px;
+  font-style: italic;
+}
+
+/*  dashboard */
+/* ----------- */
+
+.new-post .create-post a {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+.post-title a {
+  color: #ffffff; 
+}
+
+.post-title a:hover {
+  text-decoration: underline;
+}
+
+.post-item {
+  border-bottom: 1px solid #e9ecef;
+  padding-bottom: 10px;
+}
+
+.container {
+  max-width: 1140px; 
+}
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+
+.comment-name-date{
+  display: flex;
+  justify-content: space-between;
+}
+/* responsivness of dashboard */
+/* ------------------------ */
+@media (max-width: 767px) {
+  .post-item {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}

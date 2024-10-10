@@ -1,0 +1,29 @@
+<div class="container mt-4">
+  <!-- New Post Section -->
+  <div class="row mb-4 new-post">
+    <div class="col-md-4 mb-3 mb-md-0 create-post">
+      <a class="btn btn-primary btn-lg btn-block" href="/post">+ New Post</a>
+    </div>
+
+    {{#if posts.length}}
+    <div class="col-md-8">
+      <h3 class="mb-3">Current Posts:</h3>
+
+      {{#each posts as |post|}}
+      <div class="row mb-3 post-item">
+        <div class="col-12">
+          <h5 class="post-title">
+            <a href="/postUpdate/{{post.id}}" class="text-decoration-none">{{post.title}}</a>
+          </h5>
+          <p class="text-muted">{{format_date post.date_created}}</p>
+        </div>
+      </div>
+      {{/each}}
+    </div>
+    {{else}}
+    <div class="col-md-8">
+      <p>No posts available.</p>
+    </div>
+    {{/if}}
+  </div>
+</div>
